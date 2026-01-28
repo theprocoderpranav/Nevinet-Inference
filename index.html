@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nevinet — Demo</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <button class="tab-btn active" data-tab="prediction">Prediction</button>
+    <button class="tab-btn" data-tab="clinics">Clinics</button>
+    <button class="tab-btn" data-tab="advice">Clinical Advice</button>
+  </div>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Brand -->
+    <div class="brand">
+      NEVINET
+      <div class="demo-badge">DEMO MODE — NO ML INFERENCE ACTIVE</div>
+    </div>
+
+    <!-- Prediction -->
+    <section id="prediction" class="tab-content active">
+      <h2>Skin Lesion Prediction</h2>
+      <p class="subtitle">
+        This interface demonstrates the user experience only.
+        Predictions shown below are simulated.
+      </p>
+
+      <!-- Upload -->
+      <label for="fileInput" class="upload-box">
+        <span>Click to Upload Lesion Image</span>
+        <input type="file" id="fileInput" accept="image/*" hidden />
+      </label>
+
+      <!-- Preview -->
+      <img id="imagePreview" alt="Lesion preview" />
+
+      <!-- Result -->
+      <div id="prediction-box"></div>
+    </section>
+
+    <!-- Clinics -->
+    <section id="clinics" class="tab-content">
+      <h2>Nearby Dermatology Clinics</h2>
+      <div class="map-placeholder">
+        Clinic map integration (Google Maps API)
+      </div>
+    </section>
+
+    <!-- Advice -->
+    <section id="advice" class="tab-content">
+      <h2>Clinical Advice</h2>
+      <ul>
+        <li>This tool does not provide a medical diagnosis.</li>
+        <li>Always consult a licensed dermatologist.</li>
+        <li>Early evaluation improves patient outcomes.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
